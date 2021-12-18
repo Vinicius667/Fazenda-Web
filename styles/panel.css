@@ -1,0 +1,108 @@
+:root{
+    --cor1: #2F2BA3;
+    --cor2: #274CBA;
+    --cor3: #2973B3;
+    --cor4: #7C25B0;
+    --cor5: #5727BA;
+
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', cursive;
+
+    --font-nav-bar: 1rem var(--font-destaque) bolder;
+}
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 300vh;
+}
+
+.logo a img{
+    min-height: 50px;
+}
+
+.user a img{
+    height: 45px;
+    margin-right: 5px;
+}
+
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor1);
+    font-family: var(--font-destaque);
+    font: 10px, var(--font-destaque), bolder;
+    height: 8vh;
+}
+
+
+
+a{
+    color: white;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 2vw;
+
+}
+
+
+/* Make  logo stays in the middle of nav-bar */
+
+.nav-list,.user,.mobile-menu{
+        flex-grow: 1;
+        flex-basis: 0;  
+}
+
+
+.user{
+    display: flex;
+    justify-content: right;
+}
+
+
+@media (max-width: 750px){
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        width: 100vw;
+        background-color: var(--cor2);
+        height: 92vh;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    
+
+
+}
